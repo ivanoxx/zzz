@@ -1,0 +1,25 @@
+<h1>Shopping List Page</h1>
+
+<h5>Nama: </h5>
+<p>{{ nama }}</p>
+<h5>Kelas: </h5>
+<p>{{ kelas }}</p>
+
+<table>
+    <tr>
+    <th>Nama Item</th>
+    <th>Tanggal Tambah</th>
+    <th>Harga</th>
+    <th>Deskripsi</th>
+    </tr>
+    <!-- Tambahkan data shopping list di bawah baris ini -->
+    {% for item in keranjang %}
+    <tr>
+        <th>{{ item.nama }}</th>
+        <th>{{ item.tanggal_tambah }}</th>
+        <th>{{ item.harga }}</th>
+        <th>{{ item.deskripsi }}</th>
+    </tr>
+    {% endfor %}
+</table>
+
